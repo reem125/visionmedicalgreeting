@@ -1,0 +1,25 @@
+<!doctype html><html lang="ar" dir="rtl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#078fc4"><title>Vision Medical | Greeting Studio</title>
+<link rel="icon" href="./favicon.png"><link rel="stylesheet" href="./styles.css"></head>
+<body><main class="app-shell">
+<header class="topbar glass">
+ <div class="brand"><img src="./vision-logo.png" alt="Vision Medical"><div class="brand-copy"><span class="kicker">VISION MEDICAL</span><h1 id="mainHeading">أنشئ معايدتك الخاصة</h1></div></div>
+ <div class="top-actions"><a class="btn btn-soft" href="./admin.html">Admin Studio</a></div>
+</header>
+<section class="main-grid">
+ <aside class="panel glass">
+  <div class="panel-head"><span class="step">1</span><div><h2>بيانات المعايدة</h2><p class="muted">اكتب الاسم بالعربي أو الإنجليزي أو كليهما.</p></div></div>
+  <label for="arName">الاسم بالعربي</label><div class="input-wrap"><input id="arName" type="text" maxlength="40" placeholder="مثال: محمد أحمد" dir="rtl"><span class="counter" id="arCount">0/40</span></div>
+  <label for="enName">الاسم بالإنجليزي</label><div class="input-wrap"><input id="enName" type="text" maxlength="44" placeholder="Example: Mohamed Ahmed" dir="ltr"><span class="counter" id="enCount">0/44</span></div>
+  <div class="notice">✓ تظهر التغييرات مباشرة على التصميم، ويتم تصغير الخط تلقائيًا للأسماء الطويلة.</div>
+  <p class="error" id="error"></p>
+  <div class="actions"><button class="btn btn-primary" id="download">تحميل المعايدة</button><button class="btn btn-soft" id="clear">مسح الأسماء</button></div>
+  <div class="notice">🔒 الأسماء تُستخدم داخل جهازك فقط ولا يتم حفظها أو إرسالها.</div>
+ </aside>
+ <section class="preview-panel glass">
+  <div class="preview-head"><div><h2>معاينة التصميم</h2><p class="muted">الملف النهائي بدقة 1080 × 1080 بكسل.</p></div><span class="live"><i></i> معاينة مباشرة</span></div>
+  <div class="stage"><div class="loading" id="loading"><div class="spinner"></div><strong>جارٍ تحميل التصميم…</strong></div><canvas id="canvas" width="1080" height="1080"></canvas></div>
+ </section>
+</section><footer class="footer">© Vision Medical — Greeting Studio Pro</footer></main>
+<div class="toast" id="toast"></div><script src="./common.js"></script><script src="./employee.js"></script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="en" dir="ltr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#078fc4"><title>Vision Medical | Admin Studio</title>
+<link rel="icon" href="./favicon.png"><link rel="stylesheet" href="./styles.css"></head>
+<body><main class="app-shell">
+<header class="topbar glass">
+ <div class="brand"><img src="./vision-logo.png" alt="Vision Medical"><div class="brand-copy"><span class="kicker">VISION MEDICAL</span><h1>Greeting Studio Pro</h1></div></div>
+ <div class="top-actions"><a class="btn btn-soft" href="./index.html" target="_blank">Open employee page</a><button class="btn btn-primary" id="export">Download publish file</button></div>
+</header>
+<section class="main-grid">
+ <aside class="panel glass">
+  <div class="tabs"><button class="tab active" data-tab="template">Template</button><button class="tab" data-tab="arabic">Arabic</button><button class="tab" data-tab="english">English</button></div>
+  <section class="admin-section active" id="template">
+   <h2>Occasion & template</h2><p class="muted">Upload any square design. The image is embedded inside the publish file.</p>
+   <label>Occasion name</label><input id="occasion" type="text">
+   <label>Employee page heading</label><input id="headingAr" type="text" dir="rtl">
+   <label>Upload template</label><input id="templateFile" type="file" accept="image/png,image/jpeg,image/webp">
+   <button class="btn btn-soft" id="defaultTemplate" style="width:100%;margin-top:10px">Restore default template</button>
+  </section>
+  <section class="admin-section" id="arabic">
+   <div class="switch-row"><h2>Arabic name</h2><label class="switch"><input id="arEnabled" type="checkbox"><span class="slider"></span></label></div>
+   <label>Preview name</label><input id="arPreview" type="text" value="محمد أحمد" dir="rtl">
+   <div class="split"><div><label>Font</label><select id="arFont"><option>Tahoma</option><option>Arial</option><option>Georgia</option></select></div><div><label>Size</label><input id="arSize" type="number" min="14" max="100"></div></div>
+   <label>Color</label><div class="color-grid"><input id="arColor" type="color"><input id="arColorText" type="text"></div>
+  </section>
+  <section class="admin-section" id="english">
+   <div class="switch-row"><h2>English name</h2><label class="switch"><input id="enEnabled" type="checkbox"><span class="slider"></span></label></div>
+   <label>Preview name</label><input id="enPreview" type="text" value="Mohamed Ahmed" dir="ltr">
+   <div class="split"><div><label>Font</label><select id="enFont"><option>Arial</option><option>Tahoma</option><option>Georgia</option></select></div><div><label>Size</label><input id="enSize" type="number" min="14" max="100"></div></div>
+   <label>Color</label><div class="color-grid"><input id="enColor" type="color"><input id="enColorText" type="text"></div>
+  </section>
+  <div class="actions"><button class="btn btn-primary" id="saveDraft">Save draft</button><button class="btn btn-danger" id="reset">Reset</button></div>
+  <div class="admin-help"><strong>How to publish:</strong> Click “Download publish file”, then replace <code>site-config.json</code> in GitHub and commit. Every employee will see the new template after the site updates.</div>
+ </aside>
+ <section class="preview-panel glass">
+  <div class="preview-head"><div><h2>Canva-style editor</h2><p class="muted">Drag either name directly on the design.</p></div><span class="pill">1080 × 1080</span></div>
+  <div class="stage"><div class="loading" id="loading"><div class="spinner"></div><strong>Loading editor…</strong></div><canvas id="canvas" width="1080" height="1080"></canvas></div>
+  <div class="notice">Tip: Click and drag the Arabic or English name. Save the draft, then download the publish file when ready.</div>
+ </section>
+</section><footer class="footer">Vision Medical — Admin Studio Pro</footer></main>
+<div class="toast" id="toast"></div><script src="./common.js"></script><script src="./admin.js"></script></body></html>

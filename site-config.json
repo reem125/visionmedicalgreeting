@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "occasion": "Eid Al Fitr",
+  "headingAr": "أنشئ معايدتك الخاصة",
+  "headingEn": "Create your greeting",
+  "template": "default-template.jpg",
+  "backgroundDataUrl": "",
+  "arabic": {
+    "enabled": true,
+    "x": 540,
+    "y": 735,
+    "fontSize": 38,
+    "minFontSize": 22,
+    "fontFamily": "Tahoma",
+    "fontWeight": 700,
+    "color": "#0B91C9",
+    "maxWidth": 720
+  },
+  "english": {
+    "enabled": true,
+    "x": 540,
+    "y": 785,
+    "fontSize": 27,
+    "minFontSize": 17,
+    "fontFamily": "Arial",
+    "fontWeight": 700,
+    "color": "#0B91C9",
+    "maxWidth": 720
+  }
+}
